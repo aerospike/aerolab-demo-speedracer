@@ -16,10 +16,10 @@ echo "Seed: ${NODEIP}"
 # prepare asbench
 if [ "${LOAD}" = "i" ]
 then
-    echo "nohup asbench -h ${NODEIP}:3000 -U superman -Pkrypton -n ${NAMESPACE} -s \$(hostname) -b testbin -K 0 -k 5000000 -z 16 -t 0 -o "I2,S25,B50" -w I --socket-timeout 200 --timeout 1000 --max-retries 2 >>/var/log/asbench.log 2>&1 &" > asbench.sh
+    echo "nohup asbench -h ${NODEIP}:3000 -U superman -Pkrypton -n ${NAMESPACE} -s \$(hostname) -b testbin -K 0 -k 25000000 -z 16 -t 0 -o "I2,S25,B50" -w I --socket-timeout 200 --timeout 1000 --max-retries 2 >>/var/log/asbench.log 2>&1 &" > asbench.sh
 elif [ "${LOAD}" = "ru" ]
 then
-    echo "nohup asbench -h ${NODEIP}:3000 -U superman -Pkrypton -n ${NAMESPACE} -s \$(hostname) -b testbin -K 0 -k 5000000 -z 16 -t 86400 -g 1000 -o "I2,S25,B50" -w RU,80 --socket-timeout 200 --timeout 1000 --max-retries 2 -d >>/var/log/asbench.log 2>&1 &" > asbench.sh
+    echo "nohup asbench -h ${NODEIP}:3000 -U superman -Pkrypton -n ${NAMESPACE} -s \$(hostname) -b testbin -K 0 -k 25000000 -z 16 -t 86400 -g 1000 -o "I2,S25,B50" -w RU,80 --socket-timeout 200 --timeout 1000 --max-retries 2 -d >>/var/log/asbench.log 2>&1 &" > asbench.sh
 else
     echo "invalid usage"
     exit 1
