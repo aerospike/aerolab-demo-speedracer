@@ -10,6 +10,13 @@ Process in a nutshell:
   * run stop_ and start_ scripts to your needs
   * destroy everything by running destroy scripts
 
+Note on nvme usage:
+ * edit template_nvme.conf to your needs
+ * edit configure.sh and change instance type to one that uses nvme disks
+   * note each instance type may have different nvme disks mapped, check manually by deployinga one-node cluster with aerolab and ls /dev
+ * in configure.sh also uncomment and edit the PROVISION= line to list the disks that you want provisioned
+   * note this must match disk names what's in template_nvme as partitions cause otherwise it won't work
+
 Below explains what each file is. Execute shell scripts in the order in which they are listed below as well for a successful demo run.
 
 AWS requirements - one time stup (I should really add some logic to aerolab to allow it to create and administer those...):
@@ -36,6 +43,9 @@ astools.conf
 
 template.conf
   ready aerospike.conf template
+
+template_nvme.conf
+  this will be deployed instead of template.conf if configure.sh PROVISION variable is set to a list of disks
 
 asbench.json
   grafana json file for the asbench dashboard

@@ -126,5 +126,5 @@ echo
 nip=$(aerolab client list |grep ${PRETTY_NAME} |egrep -o '([0-9]{1,3}\.){3}[0-9]{1,3}' |tail -1)
 echo "1. Go to http://${nip}:3000 and login (admin:admin)"
 echo "2. Go to http://${nip}:3000/datasources , click on 'Add data source' and add Loki with URL http://localhost:3100 (enter URL and hit 'Save and Test')"
-echo "3. Go to http://${nip}:3000/dashboard/import , click on 'Upload JSON file' and upload asbench.json provided"
+echo "3. Go to http://${nip}:3000/dashboard/import , click on 'Upload JSON file' and upload asbench.json provided in this directory"
 echo "4. Go to http://${nip}:3000/d/Ck3pRJnVz/asbench-statistics and enjoy"
