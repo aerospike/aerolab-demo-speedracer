@@ -1,8 +1,8 @@
 # basics
-NAME="demo-reinvent"         # cluster name
+NAME="demo-reinv"         # cluster name
 AMS_NAME="demo-mon-reinvent"      # ams client name
-CLIENT_NAME="speedracer-reinvent" # name of client machine group
-PRETTY_NAME="speedrace-reinvent-mon"   # name of the asbench grafana machine
+CLIENT_NAME="speedracer-reinv" # name of client machine group
+PRETTY_NAME="speedrace-reinv-mon"   # name of the asbench grafana machine
 AWS_REGION=""          # don't touch this one
 AWS_REGION="us-east-1" # comment out to use docker
 AWS_INSTANCE="c5ad.4xlarge" # e.g. c5ad.4xlarge
