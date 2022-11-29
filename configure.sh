@@ -1,14 +1,14 @@
 # basics
-NAME="demo-oscar"         # cluster name
-AMS_NAME="demo-mon-oscar"      # ams client name
-CLIENT_NAME="speedracer" # name of client machine group
-PRETTY_NAME="speedrace-mon"   # name of the asbench grafana machine
+NAME="demo-reinvent"         # cluster name
+AMS_NAME="demo-mon-reinvent"      # ams client name
+CLIENT_NAME="speedracer-reinvent" # name of client machine group
+PRETTY_NAME="speedrace-reinvent-mon"   # name of the asbench grafana machine
 AWS_REGION=""          # don't touch this one
 AWS_REGION="us-east-1" # comment out to use docker
 AWS_INSTANCE="c5ad.4xlarge" # e.g. c5ad.4xlarge
 AWS_CLIENT_INSTANCE="t3a.medium"
 VER="6.1.0.4"
-FEATURES="/Users/oscar/aerospike/features.conf"
+FEATURES="/Users/oscarherrera/aerolab/templates/features.conf"
 NAMESPACE="bar"
 CLIENTS=2
 PROVISION="" # don't touch this
